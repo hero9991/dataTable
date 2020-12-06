@@ -58,7 +58,7 @@ const Table = ({ data, activeRowsCount, setData, portionSize }) => {
 
     return <div className={c.table__wrapper}>
         <div className={c.top}>
-            <NavLink className={c.link} to="/Nav"> {'<--'} Вернуться к выбору</NavLink>
+            <NavLink className={c.link} to="/"> {'<--'} Вернуться к выбору</NavLink>
             <Filter onSubmit={onSubmit} />
         </div>
         <AddItem setData={setData} data={data} setIsSorted={setIsSorted} />

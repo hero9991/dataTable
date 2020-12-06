@@ -9,7 +9,7 @@ const App = ({ isLoading }) => {
   return (
     <div className={isLoading ? "App__loading" : "App"}>
       <div className="App__container">
-        <Route path="/Nav" render={() => <NavContainer />} />
+        <Route exact path="/" render={() => <NavContainer />} />
         <Route path="/Table" render={() => <TableContainer />} />
       </div>
     </div>
