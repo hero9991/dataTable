@@ -1,0 +1,22 @@
+.input__error{
+    border: 2px solid red;
+}
+.text__error{
+    font-weight: 400;
+    color: red;
+}
+.table__body{
+    position: relative;
+}
+
+
+.button{
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    transform:translate(-50%, 0);
+    background-color: red;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer
+}

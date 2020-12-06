@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route } from 'react-router-dom';
+import NavContainer from './components/Nav/NavContainer';
+import TableContainer from './components/Table/TableContainer';
+import { connect } from 'react-redux';
+import { getIsLoading } from './redux/table-selectors';
 
-function App() {
+const App = ({ isLoading }) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={isLoading ? "App__loading" : "App"}>
+      <div className="App__container">
+        <Route path="/Nav" render={() => <NavContainer />} />
+        <Route path="/Table" render={() => <TableContainer />} />
+      </div>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  isLoading: getIsLoading(state)
+})
+
+export default connect(mapStateToProps, {})(App);

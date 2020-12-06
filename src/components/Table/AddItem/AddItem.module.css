@@ -1,0 +1,13 @@
+.form__wrapper{
+    margin-bottom: 33px;
+    position: relative
+}
+.button{
+    padding: 10px 20px;
+}
+.table th{
+    border: 1px solid rgb(0, 0, 0)
+}
+.table input{
+    width: 100%;
+}
